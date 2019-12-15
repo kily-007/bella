@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>第五关</title>
+	</head>
+	<style type="text/css">
+			h1 {
+				margin-left: 38%;
+				margin-top: 20px;
+			}
+			
+			img {
+				display: none;
+				position: relative;
+				margin-left: 0%;
+				margin-top: 5%;
+				width: 99%;
+				height: 30%;
+			}
+			
+			.ui {
+				position: relative;
+				left: 50%;
+				bottom: 5%;
+				width: 300px;
+				margin-left: -150px;
+				white-space: nowrap;
+			}
+			
+			#ui-input {
+				width: 60%;
+				height: 50px;
+				margin-left: 10%;
+				background: none;
+				font-size: 24px;
+				font-weight: bold;
+				color: #231F20;
+				text-align: center;
+				border: none;
+				border-bottom: 2px solid black;
+			}
+			
+			#ui-input:focus {
+				outline: none;
+				border: none;
+				border-bottom: 2px solid black;
+			}
+			
+			#ui-button {
+				height: 37px;
+				width: 100px;
+				background-color: #6699FF;
+				font-size: 20px;
+			}
+			#ui-button2{
+				display: none;
+				height: 40px;
+				width: 120px;
+				background-color: #6699FF;
+				font-size: 18px;
+				position: relative;
+				font-size: 18px;
+				left: 31%;
+    			margin-top: 22%;
+			}
+			#titl{
+				width: 80%;
+				height: 10%;
+				font-size: 18px;
+				margin-left: 17%;
+				margin-top: 2%;
+			}
+			label{
+				display: none;
+				position: absolute;
+				left: 16%;
+				font-size: 16px;
+				margin-top: 5%;
+			}
+		</style>
+	<script type="text/javascript">
+		function test() {
+				var value = document.getElementById("ui-input").value; //获取输入框元素
+				if(value=="哎") {
+					document.getElementById("posi").style.display="block";//可见ui-button2
+					document.getElementById("ui-button2").style.display="block";
+					document.getElementById("img1").style.display="block";
+				}else{
+					alert("不对喔，乖乖，再试一次吧");
+				}
+		}
+		function test1() {
+			window.location.href="index8.html";
+		}
+	</script>
+	<body>
+		<h1>最后一关</h1>
+		<h2 id="titl">请拥抱大可爱，并亲一下脸颊<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;获得开锁密码</h2>
+	
+		<div class="ui">
+			<input id="ui-input" type="text" />
+			<input id="ui-button" type="button" onclick="test();" value="确定"/>
+		</div>
+		
+		<img id="img1" src="./images/index7.0.png" />
+		<label id="posi">获得支票一张，请找大可爱兑换</label>
+		
+		<input id="ui-button2" type="button" onclick="test1();" value="下一页"/>
+	</body>
+
+</html>

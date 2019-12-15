@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>星月的小世界</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default2.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<br />
+				<br />
+				<div class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;祝你生日快乐.</div><br /><br  /><br /><br  /><br />
+				<div class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;Happy birthday to you
+（祝你生日快乐）
+
+Happy birthday to you
+
+（祝你生日快乐）
+
+Happy birthday,happy birthday
+
+（生日快乐，生日快乐）
+
+Happy birthday to you
+
+（祝你生日快乐）.
+				
+				</div>
+				
+				
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						乖乖，已经出生
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu" style="margin-right: 31%;">
+						生日快乐，小可爱<br/>
+						<div class="signature">MrChen</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			 <a href='http://www.miibeian.gov.cn' target='_blank'>粤ICP备16108165号-1</a> Copyright © 2016  熊炼 2016-2019
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(1996, 11, 21);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+		
+	</script>
+</body>
+</html>
